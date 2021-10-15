@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm())
+{
+    <table cellspacing="10">
+
+        <h4>User</h4>
+        <hr>
+        <tr>
+            <td><b>Email Address:</b></td>  &emsp; &emsp; &emsp;
+            <td>
+                @Html.TextBox("txtEMailId", null, new { @class = "form-control" })
+            </td>
+        </tr>
+        <tr>
+            <td>    <b>Password:</b>&emsp; &emsp; &emsp;</td>
+            <td>
+                @Html.TextBox("txtPassword", null, new { @class = "form-control" })
+            </td>
+        </tr>
+        <tr>
+
+            <td colspan="2">
+                <input type="submit" value="Login" class="btn btn-default" / style="margin-left: 120px;">
+            </td>
+        </tr>
+    </table>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
